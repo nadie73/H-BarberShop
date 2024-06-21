@@ -1,0 +1,76 @@
+CREATE TABLE tbl_rol(id int AUTO_INCREMENT,
+                    nombre_rol varchar(30) not null,
+                    PRIMARY key(id));
+                    
+CREATE TABLE tbl_usuario(id int AUTO_INCREMENT,
+                        nombre_usuario varchar(100) not null,
+                        correo varchar(255) not null,
+                        celular varchar(20) not null,
+                        fecha_ingreso date not null,
+                        contrasena varchar(100) not null,
+                        estado int not null,
+                        id_rol int null,
+                        PRIMARY KEY(id),
+                        FOREIGN KEY(id_rol) REFERENCES tbl_rol(id));
+                       
+CREATE TABLE muestras_trabajo(id int AUTO_INCREMENT,
+                       nombre_muestra varchar(50) not null,
+                       descripcion varchar(255) not null,
+                       foto varchar(255) not null,
+                       estado int not null,
+                       id_usuario int null,
+                       PRIMARY KEY(id),
+                       FOREIGN KEY(id_usuario) REFERENCES tbl_usuario(id));
+
+CREATE TABLE `tbl_servicio` (
+  `id` int(11) NOT NULL,
+  `nombre_servicio` varchar(30) NOT NULL,
+  `descripcion_servicio` varchar(250) DEFAULT NULL,
+  `costo_servicio` float NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `tiempo_servicio` varchar(20) NOT NULL,
+  `estado` int(11) NOT NULL,
+PRIMARY KEY(id));
+
+CREATE TABLE `tbl_pedido` (
+  `id` int(11) NOT NULL,
+  `costo_total_pedido` int(11) NOT NULL,
+  `fecha_pedido` datetime NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(id_usuario) REFERENCES tbl_usuario(id)
+);
+CREATE TABLE `tbl_producto` (
+  `id` int(11) NOT NULL,
+  `nombre_producto` varchar(50) NOT NULL,
+  `descripcion_producto` varchar(250) DEFAULT NULL,
+  `costo_producto` int(11) NOT NULL,
+  `precio_producto` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `stock_maximo` int(11) NOT NULL,
+  `stock_minimo` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `estado` int(11) NOT NULL,
+  `imagen` varchar(255) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE tbl_cita(id int AUTO_INCREMENT,
+                     fecha_cita date NOT null,
+                     hora_cita time not null,
+                     fecha_reserva datetime not null,
+                     estado int not null,
+                     id_usuario int null,
+                     id_servicio int null,
+                     PRIMARY KEY(id),
+                     FOREIGN KEY(id_usuario) REFERENCES tbl_usuario(id),
+                     FOREIGN KEY(id_servicio) REFERENCES tbl_servicio(id));
+
+CREATE TABLE tbl_pedido_producto(id int AUTO_INCREMENT,
+                                 `cantidad_productos` int(11) NOT NULL,
+                                 id_producto int null,
+                                 id_pedido int null,
+                                 PRIMARY KEY(id),
+                                 FOREIGN KEY(id_producto) REFERENCES tbl_producto(id),
+                                 FOREIGN KEY(id_pedido) REFERENCES tbl_pedido(id)
+                                );

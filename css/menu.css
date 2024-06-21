@@ -1,0 +1,57 @@
+#nav{
+    background-color: black;
+}
+#menu{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titulosmenu{
+    color: white !important;
+   font-size:larger !important; 
+}
+
+
+
+
+#menu_responsive{
+    background-color: white;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    flex: 1; /* Hace que cada elemento ocupe el mismo espacio */
+    text-align: center;
+  }
+
+#servicios{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+#agendar{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#bordecarta{
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.texto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.agendar{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+

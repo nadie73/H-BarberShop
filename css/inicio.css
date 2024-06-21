@@ -1,0 +1,36 @@
+.letra{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo{   
+    display: flex;
+    justify-content: center;  
+    margin-top: 50px;
+}
+
+.logo img{
+    width: 400px;
+    border-radius: 50%;
+}
+
+h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: black;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.iniciar{
+    background-color: black;
+    
+}
+
+.registrarse{
+    background-color: black;
+}

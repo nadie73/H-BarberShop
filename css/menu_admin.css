@@ -1,0 +1,41 @@
+#nav{
+    background-color: black;
+}
+#menu{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titulosmenu{
+    color: white;
+   font-size:larger; 
+}
+
+#menu_responsive{
+    background-color: white;
+}
+
+#servicios{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+#agendar{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#bordecarta{
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.texto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.editar{
+    background-color: black;
+}

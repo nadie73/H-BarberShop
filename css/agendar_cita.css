@@ -1,0 +1,30 @@
+.logo{
+    height: 150px; 
+}
+
+.logo-centrado {
+    display: flex;
+    justify-content: center;
+}
+
+
+.letra{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.div-form{
+    width: 400px;
+}
+
+.iconos{
+    height: 15px;
+}
+
+.boton{
+    gap: 120px;
+}
+
+.color{
+    color: red !important;
+}

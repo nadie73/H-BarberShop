@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="css/ejemplo.css" rel="stylesheet">
+    <link href="img/logo.png" rel="icon">
+</head>
+
+<body>
+    <div class="container py-5 letra">
+        <input type='text' name='buscar' placeholder='Buscar por nombre'>
+        <input type='submit' value='Buscar'>
+        <a href="menu_admin.php" class="btn btn-dark fw-bold volver">Volver al menú</a>
+        </form>
+        <h2 class="text-center fw-bold mt-5 activos"> Listado de barberos activos </h2>
+        <div class="table-responsive">
+            <table class="table table-dark table-bordered mt-5 tabla-activos">
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Nombre </th>
+                        <th> Celular </th>
+                        <th> Fecha ingreso </th>
+                        <th> Fecha modificacón </th>
+                        <th> Horario atención </th>
+                        <th> Acción </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jhonatan</td>
+                        <td>1111</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>8-9</td>
+                        <td>Desactivar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
